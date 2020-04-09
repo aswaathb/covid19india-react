@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/covid19india-react/static/css/main.bbf08469.chunk.css",
+    "main.css": "/covid19india-react/static/css/main.ac2792ef.chunk.css",
     "main.js": "/covid19india-react/static/js/main.2ed22364.chunk.js",
     "main.js.map": "/covid19india-react/static/js/main.2ed22364.chunk.js.map",
     "runtime-main.js": "/covid19india-react/static/js/runtime-main.7fd1d5af.js",
@@ -9,10 +9,10 @@
     "static/js/2.df8ae797.chunk.js": "/covid19india-react/static/js/2.df8ae797.chunk.js",
     "static/js/2.df8ae797.chunk.js.map": "/covid19india-react/static/js/2.df8ae797.chunk.js.map",
     "index.html": "/covid19india-react/index.html",
-    "precache-manifest.e6c5f6d569d3b88ebd4dfae921c7b920.js": "/covid19india-react/precache-manifest.e6c5f6d569d3b88ebd4dfae921c7b920.js",
+    "precache-manifest.978bbfa0d2025c02556b70384f8c80c1.js": "/covid19india-react/precache-manifest.978bbfa0d2025c02556b70384f8c80c1.js",
     "service-worker.js": "/covid19india-react/service-worker.js",
     "static/css/2.7c35e809.chunk.css.map": "/covid19india-react/static/css/2.7c35e809.chunk.css.map",
-    "static/css/main.bbf08469.chunk.css.map": "/covid19india-react/static/css/main.bbf08469.chunk.css.map",
+    "static/css/main.ac2792ef.chunk.css.map": "/covid19india-react/static/css/main.ac2792ef.chunk.css.map",
     "static/js/2.df8ae797.chunk.js.LICENSE.txt": "/covid19india-react/static/js/2.df8ae797.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/covid19india-react/static/media/archia-thin-webfont.e88f1cf3.woff2",
     "static/media/hospital_c.svg": "/covid19india-react/static/media/hospital_c.4756cba1.svg",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.7fd1d5af.js",
     "static/css/2.7c35e809.chunk.css",
     "static/js/2.df8ae797.chunk.js",
-    "static/css/main.bbf08469.chunk.css",
+    "static/css/main.ac2792ef.chunk.css",
     "static/js/main.2ed22364.chunk.js"
   ]
 }

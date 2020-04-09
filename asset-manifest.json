@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/covid19india-react/static/css/main.a0d00af5.chunk.css",
-    "main.js": "/covid19india-react/static/js/main.5ae4b851.chunk.js",
-    "main.js.map": "/covid19india-react/static/js/main.5ae4b851.chunk.js.map",
+    "main.css": "/covid19india-react/static/css/main.807ae445.chunk.css",
+    "main.js": "/covid19india-react/static/js/main.0616921e.chunk.js",
+    "main.js.map": "/covid19india-react/static/js/main.0616921e.chunk.js.map",
     "runtime-main.js": "/covid19india-react/static/js/runtime-main.7fd1d5af.js",
     "runtime-main.js.map": "/covid19india-react/static/js/runtime-main.7fd1d5af.js.map",
     "static/css/2.7c35e809.chunk.css": "/covid19india-react/static/css/2.7c35e809.chunk.css",
-    "static/js/2.df8ae797.chunk.js": "/covid19india-react/static/js/2.df8ae797.chunk.js",
-    "static/js/2.df8ae797.chunk.js.map": "/covid19india-react/static/js/2.df8ae797.chunk.js.map",
+    "static/js/2.9d3df464.chunk.js": "/covid19india-react/static/js/2.9d3df464.chunk.js",
+    "static/js/2.9d3df464.chunk.js.map": "/covid19india-react/static/js/2.9d3df464.chunk.js.map",
     "index.html": "/covid19india-react/index.html",
-    "precache-manifest.93d8d44368cb2790919d58f7b791bfe0.js": "/covid19india-react/precache-manifest.93d8d44368cb2790919d58f7b791bfe0.js",
+    "precache-manifest.ff0c73dc433e5fe165a72e1e827043e2.js": "/covid19india-react/precache-manifest.ff0c73dc433e5fe165a72e1e827043e2.js",
     "service-worker.js": "/covid19india-react/service-worker.js",
     "static/css/2.7c35e809.chunk.css.map": "/covid19india-react/static/css/2.7c35e809.chunk.css.map",
-    "static/css/main.a0d00af5.chunk.css.map": "/covid19india-react/static/css/main.a0d00af5.chunk.css.map",
-    "static/js/2.df8ae797.chunk.js.LICENSE.txt": "/covid19india-react/static/js/2.df8ae797.chunk.js.LICENSE.txt",
+    "static/css/main.807ae445.chunk.css.map": "/covid19india-react/static/css/main.807ae445.chunk.css.map",
+    "static/js/2.9d3df464.chunk.js.LICENSE.txt": "/covid19india-react/static/js/2.9d3df464.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/covid19india-react/static/media/archia-thin-webfont.e88f1cf3.woff2",
     "static/media/hospital_c.svg": "/covid19india-react/static/media/hospital_c.4756cba1.svg",
     "static/media/user.svg": "/covid19india-react/static/media/user.c0697d5d.svg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.7fd1d5af.js",
     "static/css/2.7c35e809.chunk.css",
-    "static/js/2.df8ae797.chunk.js",
-    "static/css/main.a0d00af5.chunk.css",
-    "static/js/main.5ae4b851.chunk.js"
+    "static/js/2.9d3df464.chunk.js",
+    "static/css/main.807ae445.chunk.css",
+    "static/js/main.0616921e.chunk.js"
   ]
 }

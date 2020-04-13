@@ -254,6 +254,13 @@ h6 {
   }
 }
 
+.leaflet-container {
+  width: 98%;
+  height: 80vh;
+  margin:auto
+
+}
+
 .Resources {
   display: flex;
   flex-direction: row;
@@ -2988,6 +2995,7 @@ select {
       max-width: 6.75rem;
     }
   }
+  
 
   .cards-container {
     padding: 1rem;
@@ -3383,6 +3391,106 @@ select {
     }
   }
   
+}
+.tracker_display
+{
+   margin-top: 30px;
+
+  .line {
+    position: relative;
+    top: 50%;
+    width: 100%;
+
+    margin: 0 auto;
+    border-right: 6px solid rgba(0,0,0, 0.75);
+    font-size: 5vw;
+    text-align: center;
+     white-space:nowrap;
+    overflow:hidden;transform: translateY(-50%);
+}
+
+/*Animation*/
+
+.anim-typewriter {
+    animation: typewriter 3s steps(40) 1s 1  normal both,
+    blinkTextCursor 500ms steps(40)  6  forwards;
+}
+
+@keyframes typewriter {
+    from {
+          width: 0;
+    }
+    to {
+          width: 100%;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+          border-right-color: rgba(0, 0, 0, 0.75);
+    }
+    to {
+          border-right-color: transparent;
+    }
+}
+
+}
+.tracker{
+  padding: 7px;
+  position: relative;
+
+
+
+
+
+  h1{
+    border-bottom:2px $primary solid;
+    display:inline-block;
+    margin:auto;
+    border-top:2px $primary solid;
+    text-align: center;
+    color: $cyan;
+  }
+
+  .tracker_bar{
+
+       display:flex;
+       align-items: flex-end;
+       div:first-of-type{
+         margin-left:auto;
+         margin-right:10px
+       }
+       label{
+         text-align: right;
+       }
+      .input_tracker{
+
+        position: relative;
+        left:calc(100% - 60%);
+        border:1px solid rgba(155, 148, 139,0.5);
+        background:  rgba(155, 148, 139,0.5);
+        width:60%;
+        //display:block;
+        border-radius: 5px;
+          &:focus-within{
+
+          border:1px solid black;
+          background: white;
+           } } 
+    button{
+
+       padding:auto;
+     }
+
+
+  }
+
+
+
+
+
+
+
 }
 
 .iframe-container {

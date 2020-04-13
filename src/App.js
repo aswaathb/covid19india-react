@@ -11,13 +11,13 @@ import './App.scss';
 
 import Home from './components/home';
 import Navbar from './components/navbar';
+import Tracker from './components/essentials/tracker'
 import Links from './components/links';
 import FAQ from './components/faq';
 import Banner from './components/banner';
 import PatientDB from './components/patientdb';
 import DeepDive from './components/deepdive';
-import Resources from './components/resources';
-/* import PatientDB from './components/patientdb';*/
+import Resources from './components/essentials/resources';
 
 const history = require('history').createBrowserHistory;
 
@@ -45,19 +45,25 @@ function App() {
       pageLink: '/links',
       view: Links,
       displayName: 'Helpful Links',
-      animationDelayForNavbar: 0.4,
+      animationDelayForNavbar: 0.5,
     },
     {
       pageLink: '/faq',
       view: FAQ,
       displayName: 'About',
-      animationDelayForNavbar: 0.5,
+      animationDelayForNavbar: 0.6,
     },
     {
       pageLink: '/essentials',
       view: Resources,
       displayName: 'Essentials',
       animationDelayForNavbar: 0.7,
+    },
+    {
+      pageLink: '/tracker',
+      view: Tracker,
+      displayName: 'Essentials 2.0',
+      animationDelayForNavbar: 0.8,
     },
   ];
 

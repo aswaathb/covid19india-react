@@ -29,6 +29,7 @@
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.3",
     "react-leaflet": "^2.6.3",
+    "react-leaflet-sidebarv2": "0.6.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-table": "^7.0.4",

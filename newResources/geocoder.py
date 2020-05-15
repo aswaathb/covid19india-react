@@ -40,7 +40,7 @@ class EssentialsConverter:
 
     @property
     def rate_limit_exceeded(self):
-        return not self.__api % 600
+        return self.__api and not self.__api % 600
 
     
     def populate_cities(self, dir="./", fromFile=True):
@@ -176,9 +176,9 @@ class EssentialsConverter:
         return geom
 
 
-    def make_feature(self, idx, entry):
+    def make_feature(self, entry):
         #Parse entry data
-        i = idx
+        i = entry["recordid"]
         name = entry["nameoftheorganisation"]
         desc = entry["descriptionandorserviceprovided"]
         category = entry["category"]
@@ -215,7 +215,7 @@ class EssentialsConverter:
 
         if city not in self.cityDict:
             self.failed.append(entry)
-            self.failed_ids.append(idx)
+            self.failed_ids.append(i)
             return
         
         if "http://www.google.com/maps/place/" in contact:
@@ -267,8 +267,14 @@ class EssentialsConverter:
             q_addr = city
             q_name = ""
         
+        if "PAN" in city:
+            if "India" in city:
+                q_addr = "India"
+            else:
+                q_addr = ', '.join([entry["state"], "India"])
+        
         prop = {
-            "id": i,
+            "recordid": i,
             "name": name,
             "desc": desc,
             "geoTag": q_name,
@@ -287,10 +293,10 @@ class EssentialsConverter:
         })
 
 
-    def process_entry(self, idx, entry):
+    def process_entry(self, entry):
         self.check_city(entry) # Generates city data if its not been done yet.
-        self.make_feature(idx, entry)
-        print(f'Processed {idx}')
+        self.make_feature(entry)
+        print(f'Processed #{entry["recordid"]}')
 
         
 
@@ -299,21 +305,29 @@ def main():
     entries = fetch_data()
 
     converter = EssentialsConverter()
-    
-    for i, entry in enumerate(entries):
-        converter.process_entry(i+1, entry)
+
+    """Read in old geojson via url or filepath"""
+    # old_entries = fetch_data(path="https://raw.githubusercontent.com/aswaathb/covid19india-react/publish/newResources/geoResources.json", geojson=True)
+    with open('./geoResources.json') as geo:
+        old_entries = json.load(geo)
+
+    processed_i =[] # cache recordid's for previously processed features
+    for feature in old_entries["features"]:
+        processed_i.append(feature["properties"]["recordid"])
+
+    for idx, entry in enumerate(entries):
+        if int(entry["recordid"]) not in processed_i:
+            # convert only the missing entries
+            converter.process_entry(entry)
+
         if converter.rate_limit_exceeded:
             print("API rate limit: Minute delay")
             time.sleep(60)
 
 
-    # # Read in old geojson via url or filepath
-    # processed_entries = fetch_data(path="https://raw.githubusercontent.com/aswaathb/covid19india-react/publish/newResources/geoResources.json", geojson=True)
-    # with open('./geoResources.json') as geo:
-    #     old = json.load(geo)
 
     #Feed in processed_entries as oldData to append new batch to previously geocoded entries
-    feature_collection = converter.generate_geojson(oldData=None) 
+    feature_collection = converter.generate_geojson(oldData=None) #oldData=old_entries
 
     debug = {
         "gaussian": converter.gaussian,
@@ -328,7 +342,7 @@ def main():
     }
 
 
-    save_data(feature_collection,"geoResources")
+    save_data(feature_collection,"geoResources1")
     save_data(debug, "debug")
     save_data(city_data, "cityData")
 

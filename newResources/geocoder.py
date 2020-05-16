@@ -342,7 +342,7 @@ def main():
     }
 
 
-    save_data(feature_collection,"geoResources1")
+    save_data(feature_collection,"geoResources")
     save_data(debug, "debug")
     save_data(city_data, "cityData")
 
